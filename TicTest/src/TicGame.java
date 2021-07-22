@@ -14,15 +14,14 @@ public class TicGame {
             System.out.println("Invalid params");
             return;
         }
+        
+        int dimension1 = Integer.parseInt(param[1]);
+        int dimension2 = Integer.parseInt(param[2]);
 
         if ("O".equals(param[0])) {
-            int dimension1 = Integer.parseInt(param[1]);
-            int dimension2 = Integer.parseInt(param[2]);
             ticArr[dimension1][dimension2] = 'O';
         }
         if ("X".equals(param[0])) {
-            int dimension1 = Integer.parseInt(param[1]);
-            int dimension2 = Integer.parseInt(param[2]);
             ticArr[dimension1][dimension2] = 'X';
         }
 
