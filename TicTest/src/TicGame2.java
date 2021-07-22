@@ -14,7 +14,13 @@ public class TicGame2 {
      * Assume that this game has 3*3 chess
      */
     protected int ticGameEndpoint(String[] param) {
+        if (ticArr[Integer.parseInt(param[1])][Integer.parseInt(param[2])] != 'n') {
+            System.out.println("This slot was already put, please choose other slots!");
+            return 0;
+        }
         ticArr[Integer.parseInt(param[1])][Integer.parseInt(param[2])] = param[0].toCharArray()[0];
+
+        printTic();
 
         Set<Character> winnerSet1 = new HashSet<>();
         Set<Character> winnerSet2 = new HashSet<>();
@@ -36,11 +42,9 @@ public class TicGame2 {
                     if ((ticArr[i][j] == ticArr[i+1][j+1]) && (ticArr[i][j]== ticArr[i+2][j+2])) {
                         if (ticArr[i][j] == 'O') {
                             System.out.println("The Winner is O");
-                            printTic();
                             return 1;
                         } else if (ticArr[i][j] == 'X') {
                             System.out.println("The Winner is X");
-                            printTic();
                             return 1;
                         }
                     }
@@ -50,7 +54,6 @@ public class TicGame2 {
             if (winnerSet1.size() == 1) {
                 if (winnerSet1.contains('O')) {
                     System.out.println("The Winner is O");
-                    printTic();
                     return 1;
                 } else if(winnerSet1.contains('X')) {
                     System.out.println("The Winner is X");
@@ -112,7 +115,7 @@ public class TicGame2 {
             while (true) {
                 str = br.readLine();
                 if (!str.equals("0") && !str.equals("1") && !str.equals("2")) {
-                    System.out.println("Your input is incorrect, type again");
+                    System.out.println("Your input is incorrect, type row number again");
                 } else {
                     params[1] = str;
                     break;
@@ -123,13 +126,12 @@ public class TicGame2 {
             while (true) {
                 str = br.readLine();
                 if (!str.equals("0") && !str.equals("1") && !str.equals("2")) {
-                    System.out.println("Your input is incorrect, type again");
+                    System.out.println("Your input is incorrect, type column number again");
                 } else {
                     params[2] = str;
                     break;
                 }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
