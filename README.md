@@ -1,10 +1,46 @@
 # TicTest
-Main method test output is:
+Please input role firstly, you can type 'O' or 'X' only!
+
+O
+
+Please type row number you want to choose, for example: 0, 1, 2
+
+0
+
+Please type column number you want to choose, for example: 0, 1, 2
+
+0
+
+Please input role firstly, you can type 'O' or 'X' only!
+
+O
+
+Please type row number you want to choose, for example: 0, 1, 2
+
+1
+
+Please type column number you want to choose, for example: 0, 1, 2
+
+1
+
+Please input role firstly, you can type 'O' or 'X' only!
+
+O
+
+Please type row number you want to choose, for example: 0, 1, 2
+
+2
+
+Please type column number you want to choose, for example: 0, 1, 2
+
+2
+
 The Winner is O
-<br/>
- O  |  O  |  O
+
+ O  |  n  |  n
 ---------------
- X  |  n  |  X
+ n  |  O  |  n
 ---------------
- n  |  n  |  n
+ n  |  n  |  O
 ---------------
+Game over! Good luck next time man!
