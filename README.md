@@ -1,4 +1,6 @@
 # TicTest
+## Please help check test screenshot if you wanna play, screenshots have been upload in https://github.com/grassen/TicTest/tree/main/TicTest
+
 Please input role firstly, you can type 'O' or 'X' only!
 
 O
